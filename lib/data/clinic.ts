@@ -14,7 +14,7 @@ export const NAV_LINKS: NavLink[] = [
 
 export const CLINIC_INFO: ClinicInfo = {
   name: "Infinity Medical Centre Gungahlin",
-  address: "Unit 1/63 Anthony Rolfe Avenue, Gungahlin ACT",
+  address: "Unit 1/61 Anthony Rolfe Avenue, Gungahlin ACT",
   phone: "(02) 6109 2138",
   fax: "(02) 6109 2139",
   email: "reception@imcgungahlin.com.au",

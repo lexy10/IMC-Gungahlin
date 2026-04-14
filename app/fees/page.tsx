@@ -38,9 +38,7 @@ export default function FeesPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-950/85 via-brand-900/70 to-brand-800/50" aria-hidden="true" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 md:py-20">
-          <p className="text-sm font-medium uppercase tracking-widest text-brand-200">
-            Infinity Medical Centre Gungahlin
-          </p>
+         
           <h1 className="mt-2 text-3xl font-bold text-white md:text-5xl">
             Fees &amp; Billing
           </h1>

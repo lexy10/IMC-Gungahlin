@@ -37,9 +37,6 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-950/85 via-brand-900/70 to-brand-800/50" aria-hidden="true" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 md:py-20">
-          <p className="text-sm font-medium uppercase tracking-widest text-brand-200">
-            Infinity Medical Centre Gungahlin
-          </p>
           <h1 className="mt-2 text-3xl font-bold text-white md:text-5xl">
             About Us
           </h1>
@@ -64,7 +61,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <Image src="/images/who-we-are.webp" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/who-we.png" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -126,7 +123,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <Image src="/images/approach-to-care.webp" alt="Doctor consultation" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/clinic2.jpg" alt="Doctor consultation" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -137,7 +134,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
-              <Image src="/images/quality.jpg" alt="Medical quality standards" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/clinic.jpg" alt="Medical quality standards" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
             <div className="order-1 md:order-2">
               <div className="mb-6 border-l-4 border-accent-400 pl-4">

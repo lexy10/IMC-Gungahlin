@@ -14,10 +14,10 @@ export default function Header() {
           <Image
             src="/images/imc-logo.png"
             alt="Infinity Medical Centre Gungahlin"
-            width={110}
-            height={44}
+            width={150}
+            height={55}
             priority
-            className="h-12.3 w-50h"
+            className="h-13 w-100"
           />
         </Link>
 

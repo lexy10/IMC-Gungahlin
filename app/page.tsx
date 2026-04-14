@@ -44,7 +44,7 @@ const localBusinessJsonLd = {
   image: `${BASE_URL}/og-image.jpg`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Unit 1/63 Anthony Rolfe Avenue",
+    streetAddress: "Unit 1/61 Anthony Rolfe Avenue",
     addressLocality: "Gungahlin",
     addressRegion: "ACT",
     postalCode: "2912",
@@ -82,7 +82,7 @@ export default function HomePage() {
       {/* HERO */}
       <HeroSection
         headline="Healthcare Without Barriers"
-        subtext="Infinity Medical Centre Gungahlin — a modern medical centre providing accessible, high-quality, patient-centred healthcare for individuals and families in the growing Gungahlin community. We are committed to making healthcare easier to access, with a strong focus on affordability, continuity of care, and clinical excellence."
+        subtext="A modern medical centre providing accessible, high-quality, patient-centred healthcare for individuals and families in the growing Gungahlin community. We are committed to making healthcare easier to access, with a strong focus on affordability, continuity of care, and clinical excellence."
         ctaText="Book Appointment"
         ctaHref={CLINIC_INFO.bookingUrl}
         secondaryCtaText={`Call ${CLINIC_INFO.phone}`}
@@ -158,7 +158,7 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <Image src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&q=80" alt="Doctor consultation" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/care.jpg" alt="Doctor consultation" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>

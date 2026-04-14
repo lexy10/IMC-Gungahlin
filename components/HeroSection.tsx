@@ -13,7 +13,7 @@ interface HeroSectionProps {
 }
 
 const DEFAULT_IMAGE =
-  "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1920&q=80";
+  "/images/hero.jpeg";
 
 export default function HeroSection({
   headline,
@@ -42,10 +42,10 @@ export default function HeroSection({
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-20 md:py-28">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-300">
-          Infinity Medical Centre Gungahlin
+          Healthcare Without Barriers
         </p>
         <h1 className="mt-4 max-w-2xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-          {headline}
+          Infinity Medical Centre Gungahlin
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-neutral-200 md:text-lg">
           {subtext}
