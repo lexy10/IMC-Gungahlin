@@ -105,7 +105,7 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <Image src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/facility.jpg" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>

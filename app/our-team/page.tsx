@@ -93,7 +93,7 @@ export default function OurTeamPage() {
               </div>
             </div>
             <div>
-              <Image src="https://i.pinimg.com/1200x/46/5a/f1/465af15f6684b1ea0d799fda31c951e3.jpg" alt="Medical team collaboration" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/team-intro.jpg" alt="Medical team collaboration" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function OurTeamPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
-              <Image src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&q=80" alt="Doctor listening to patient" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/photo.png" alt="Doctor listening to patient" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
             <div className="order-1 md:order-2">
               <div className="mb-6 border-l-4 border-accent-400 pl-4">
@@ -260,7 +260,7 @@ export default function OurTeamPage() {
               </div>
             </div>
             <div>
-              <Image src="https://mediconcall.com.au/wp-content/uploads/2023/03/GettyImages-998341988-2-edited.jpg" alt="International medical graduates" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/graduates.jpg" alt="International medical graduates" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function OurTeamPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
-              <Image src="https://www.tagmedstaffing.com/wp-content/uploads/2024/03/medium-shot-nurses-with-face-masks.jpg" alt="Nursing and support team" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/support.png" alt="Nursing and support team" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
             <div className="order-1 md:order-2">
               <div className="mb-6 border-l-4 border-accent-400 pl-4">
@@ -313,7 +313,7 @@ export default function OurTeamPage() {
               </div>
             </div>
             <div>
-              <Image src="https://media.istockphoto.com/id/1782848258/photo/teenager-at-a-medical-appointment.jpg?s=612x612&w=0&k=20&c=64NB_2mcmVQy0wkNVYfUAGWxb5Vse7Gj7GjYkMR4NKQ=" alt="Continuity of care" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/care1.jpg" alt="Continuity of care" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -324,7 +324,7 @@ export default function OurTeamPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
-              <Image src="https://images.ctfassets.net/fltupc9ltp8m/6YgT9YHoo95UvYdtTb2WVQ/91edd6662a4f2fde37d2004909efaf4a/thcc-join-team-hero-mobile.jpg?fm=webp&w=1900&q=80" alt="Join our medical team" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/join-our-team.webp" alt="Join our medical team" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
             <div className="order-1 md:order-2">
               <div className="mb-6 border-l-4 border-accent-400 pl-4">
