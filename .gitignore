@@ -5,9 +5,17 @@ node_modules/
 .next/
 out/
 
+# IDE
+.idea/
+.vscode/
+
+# kiro
+.kiro/
+
 # misc
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
-.kiro
-.idea
+
+# docx source
+IMC WEBSITE STRUCTURE.docx
