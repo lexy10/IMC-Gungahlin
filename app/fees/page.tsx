@@ -221,10 +221,6 @@ export default function FeesPage() {
               <Phone size={18} aria-hidden="true" />
               {CLINIC_INFO.phone}
             </a>
-            <a href={`mailto:${CLINIC_INFO.email}`} className="inline-flex items-center gap-2 text-base font-semibold text-brand-700 hover:text-brand-800">
-              <Mail size={18} aria-hidden="true" />
-              {CLINIC_INFO.email}
-            </a>
           </div>
         </div>
       </section>

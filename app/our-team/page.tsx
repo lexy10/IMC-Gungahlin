@@ -332,11 +332,7 @@ export default function OurTeamPage() {
               </div>
               <div className="space-y-4 text-base leading-relaxed text-neutral-600 md:text-lg">
                 <p>Infinity Medical Centre Gungahlin is a growing practice, and we welcome expressions of interest from healthcare professionals who are committed to patient-centred care.</p>
-                <p>If you are a GP, nurse, or healthcare professional interested in joining our team, please contact us:</p>
-                <a href={`mailto:${CLINIC_INFO.email}`} className="inline-flex items-center gap-2 text-brand-600 font-medium hover:text-brand-700 hover:underline">
-                  <Mail size={16} aria-hidden="true" />
-                  {CLINIC_INFO.email}
-                </a>
+                <p>If you are a GP, nurse, or healthcare professional interested in joining our team, please contact us.</p>
               </div>
             </div>
           </div>

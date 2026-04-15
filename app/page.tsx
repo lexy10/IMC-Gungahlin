@@ -280,7 +280,6 @@ export default function HomePage() {
             <div className="flex items-center justify-center gap-2"><MapPin size={16} className="text-brand-600" aria-hidden="true" />{CLINIC_INFO.address}</div>
             <div className="flex items-center justify-center gap-2"><Phone size={16} className="text-brand-600" aria-hidden="true" />Phone: <a href={`tel:${CLINIC_INFO.phone.replace(/\s/g,"")}`} className="text-brand-600 hover:underline">{CLINIC_INFO.phone}</a></div>
             <div className="flex items-center justify-center gap-2"><Phone size={16} className="text-brand-600" aria-hidden="true" />Fax: {CLINIC_INFO.fax}</div>
-            <div className="flex items-center justify-center gap-2"><Mail size={16} className="text-brand-600" aria-hidden="true" />Email: <a href={`mailto:${CLINIC_INFO.email}`} className="text-brand-600 hover:underline">{CLINIC_INFO.email}</a></div>
           </div>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a

@@ -86,10 +86,6 @@ export default function ContactPage() {
                   <Phone size={20} className="mt-0.5 shrink-0 text-brand-600" aria-hidden="true" />
                   <span>Fax: {CLINIC_INFO.fax}</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Mail size={20} className="mt-0.5 shrink-0 text-brand-600" aria-hidden="true" />
-                  <a href={`mailto:${CLINIC_INFO.email}`} className="text-brand-600 hover:underline">{CLINIC_INFO.email}</a>
-                </div>
               </div>
             </div>
 

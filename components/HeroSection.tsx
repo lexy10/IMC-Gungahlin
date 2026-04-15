@@ -42,7 +42,7 @@ export default function HeroSection({
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-20 md:py-28">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-300">
-          Healthcare Without Barriers
+          {headline}
         </p>
         <h1 className="mt-4 max-w-2xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
           Infinity Medical Centre Gungahlin

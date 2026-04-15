@@ -39,10 +39,6 @@ export default function Footer() {
                 <Phone size={14} className="mt-0.5 shrink-0 text-brand-400" aria-hidden="true" />
                 <a href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`} className="hover:text-white">{CLINIC_INFO.phone}</a>
               </li>
-              <li className="flex items-start gap-2">
-                <Mail size={14} className="mt-0.5 shrink-0 text-brand-400" aria-hidden="true" />
-                <a href={`mailto:${CLINIC_INFO.email}`} className="hover:text-white">{CLINIC_INFO.email}</a>
-              </li>
             </ul>
           </div>
 
