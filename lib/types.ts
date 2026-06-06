@@ -18,7 +18,6 @@ export interface ClinicInfo {
   address: string;
   phone: string;
   fax: string;
-  email: string;
   bookingUrl: string;
   openingHours: OpeningHours[];
   geo: { latitude: number; longitude: number };

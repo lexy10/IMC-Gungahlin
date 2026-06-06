@@ -44,7 +44,7 @@ const localBusinessJsonLd = {
   image: `${BASE_URL}/og-image.jpg`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Unit 1/63 Anthony Rolfe Avenue",
+    streetAddress: "Unit 1/61 Anthony Rolfe Avenue",
     addressLocality: "Gungahlin",
     addressRegion: "ACT",
     postalCode: "2912",
@@ -82,7 +82,7 @@ export default function HomePage() {
       {/* HERO */}
       <HeroSection
         headline="Healthcare Without Barriers"
-        subtext="Infinity Medical Centre Gungahlin — a modern medical centre providing accessible, high-quality, patient-centred healthcare for individuals and families in the growing Gungahlin community. We are committed to making healthcare easier to access, with a strong focus on affordability, continuity of care, and clinical excellence."
+        subtext="A modern medical centre providing accessible, high-quality, patient-centred healthcare for individuals and families in the growing Gungahlin community. We are committed to making healthcare easier to access, with a strong focus on affordability, continuity of care, and clinical excellence."
         ctaText="Book Appointment"
         ctaHref={CLINIC_INFO.bookingUrl}
         secondaryCtaText={`Call ${CLINIC_INFO.phone}`}
@@ -105,7 +105,7 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <Image src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/facility.jpg" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <Image src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&q=80" alt="Doctor consultation" width={800} height={533} className="rounded-xl object-cover shadow-md" />
+              <Image src="/images/care.jpg" alt="Doctor consultation" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
           </div>
         </div>
@@ -280,7 +280,6 @@ export default function HomePage() {
             <div className="flex items-center justify-center gap-2"><MapPin size={16} className="text-brand-600" aria-hidden="true" />{CLINIC_INFO.address}</div>
             <div className="flex items-center justify-center gap-2"><Phone size={16} className="text-brand-600" aria-hidden="true" />Phone: <a href={`tel:${CLINIC_INFO.phone.replace(/\s/g,"")}`} className="text-brand-600 hover:underline">{CLINIC_INFO.phone}</a></div>
             <div className="flex items-center justify-center gap-2"><Phone size={16} className="text-brand-600" aria-hidden="true" />Fax: {CLINIC_INFO.fax}</div>
-            <div className="flex items-center justify-center gap-2"><Mail size={16} className="text-brand-600" aria-hidden="true" />Email: <a href={`mailto:${CLINIC_INFO.email}`} className="text-brand-600 hover:underline">{CLINIC_INFO.email}</a></div>
           </div>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
