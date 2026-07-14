@@ -4,6 +4,7 @@ import { DOCTORS } from "@/lib/data/team";
 import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
 import { CalendarCheck, Phone, ArrowRight, Mail } from "lucide-react";
+import AccreditationBadges from "@/components/AccreditationBadges";
 
 const teamSeo = PAGE_SEO["our-team"];
 

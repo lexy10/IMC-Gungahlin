@@ -16,6 +16,7 @@ import {
   Link2,
 } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
+import AccreditationBadges from "@/components/AccreditationBadges";
 import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
 
@@ -53,7 +54,7 @@ const localBusinessJsonLd = {
   telephone: CLINIC_INFO.phone,
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:30", closes: "17:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "17:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "12:00", closes: "18:00" },
   ],
   geo: { "@type": "GeoCoordinates", latitude: CLINIC_INFO.geo.latitude, longitude: CLINIC_INFO.geo.longitude },
 };
@@ -107,6 +108,14 @@ export default function HomePage() {
             <div>
               <Image src="/images/facility.jpg" alt="Modern clinic interior" width={800} height={533} className="rounded-xl object-cover shadow-md" />
             </div>
+          </div>
+
+          {/* Trust badges */}
+          <div className="mt-12 border-t border-neutral-100 pt-10">
+            <p className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-neutral-500">
+              Bulk billing for eligible Medicare card holders
+            </p>
+            <AccreditationBadges badges={["medicare", "bulk-billing"]} />
           </div>
         </div>
       </section>

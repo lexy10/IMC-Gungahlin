@@ -25,7 +25,7 @@ export const CLINIC_INFO: ClinicInfo = {
     { days: "Wednesday", hours: "8:30 AM – 5:00 PM" },
     { days: "Thursday", hours: "8:30 AM – 5:00 PM" },
     { days: "Friday", hours: "8:30 AM – 5:00 PM" },
-    { days: "Saturday", hours: "9:00 AM – 5:00 PM" },
+    { days: "Saturday", hours: "12:00 PM – 6:00 PM" },
     { days: "Sunday & Public Holidays", hours: "Closed", closed: true },
   ],
   geo: {

@@ -5,6 +5,7 @@ import { NON_MEDICARE_FEES } from "@/lib/data/fees";
 import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
 import { Phone, ArrowRight, Mail } from "lucide-react";
+import AccreditationBadges from "@/components/AccreditationBadges";
 
 const feesSeo = PAGE_SEO.fees;
 
@@ -77,6 +78,11 @@ export default function FeesPage() {
                 <p className="font-semibold text-brand-700">This means no out-of-pocket cost for eligible consultations</p>
               </div>
             </div>
+          </div>
+
+          {/* Trust badges */}
+          <div className="mt-12 border-t border-neutral-100 pt-10">
+            <AccreditationBadges badges={["medicare", "bulk-billing"]} />
           </div>
         </div>
       </section>

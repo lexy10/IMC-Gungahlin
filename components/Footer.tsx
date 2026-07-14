@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CalendarCheck, Phone, Mail, MapPin } from "lucide-react";
 import { NAV_LINKS, CLINIC_INFO } from "@/lib/data/clinic";
+import AccreditationBadges from "@/components/AccreditationBadges";
 
 export default function Footer() {
   return (
@@ -69,6 +70,11 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+      </div>
+
+      {/* Accreditation badges */}
+      <div className="border-t border-darkgreen-800">
+        <AccreditationBadges className="mx-auto max-w-7xl px-4 py-8" />
       </div>
 
       {/* Bottom bar */}
