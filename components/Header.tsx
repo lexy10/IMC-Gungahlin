@@ -4,6 +4,7 @@ import { CalendarCheck, Phone } from "lucide-react";
 import { NAV_LINKS, CLINIC_INFO } from "@/lib/data/clinic";
 import NavLink from "./NavLink";
 import MobileNav from "./MobileNav";
+import BookingButton from "@/components/BookingButton";
 
 export default function Header() {
   return (
@@ -39,15 +40,11 @@ export default function Header() {
             <Phone size={16} aria-hidden="true" />
             {CLINIC_INFO.phone}
           </a>
-          <a
-            href={CLINIC_INFO.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-accent-700 transition-colors hover:bg-neutral-100"
-          >
+          <BookingButton
+            className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-accent-700 transition-colors hover:bg-neutral-100">
             <CalendarCheck size={16} aria-hidden="true" />
             Book Online
-          </a>
+          </BookingButton>
         </div>
 
         {/* Mobile nav */}

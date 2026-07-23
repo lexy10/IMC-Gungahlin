@@ -12,6 +12,11 @@ out/
 # kiro
 .kiro/
 
+# env — .env.example is committed, real secrets are not
+.env
+.env.local
+.env*.local
+
 # misc
 .DS_Store
 *.tsbuildinfo

@@ -18,11 +18,12 @@ import {
   ClipboardList,
   Users,
 } from "lucide-react";
+import BookingButton from "@/components/BookingButton";
 
 const servicesSeo = PAGE_SEO.services;
 
 export const metadata: Metadata = {
-  title: servicesSeo.title,
+  title: { absolute: servicesSeo.title },
   description: servicesSeo.description,
   openGraph: {
     title: servicesSeo.title,
@@ -193,15 +194,11 @@ export default function ServicesPage() {
             Our experienced team is here to help with all your healthcare needs.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100">
               Book Appointment
               <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
             <a
               href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`}
               className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-darkgreen-900"

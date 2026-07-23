@@ -5,11 +5,12 @@ import ContactForm from "@/components/ContactForm";
 import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import BookingButton from "@/components/BookingButton";
 
 const contactSeo = PAGE_SEO.contact;
 
 export const metadata: Metadata = {
-  title: contactSeo.title,
+  title: { absolute: contactSeo.title },
   description: contactSeo.description,
   openGraph: {
     title: contactSeo.title,
@@ -124,15 +125,11 @@ export default function ContactPage() {
             <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent-400" />By calling our reception team</li>
           </ul>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
               Book Appointment
               <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
             <a
               href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`}
               className="inline-flex items-center gap-2 rounded-full border-2 border-brand-600 px-6 py-3 text-sm font-bold text-brand-700 transition-colors hover:bg-brand-50"
@@ -242,15 +239,11 @@ export default function ContactPage() {
             Our team is committed to providing accessible, high-quality healthcare to the Gungahlin community.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100">
               Book Appointment
               <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
             <a
               href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`}
               className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700"

@@ -5,11 +5,12 @@ import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
 import { CalendarCheck, Phone, ArrowRight, Mail } from "lucide-react";
 import AccreditationBadges from "@/components/AccreditationBadges";
+import BookingButton from "@/components/BookingButton";
 
 const teamSeo = PAGE_SEO["our-team"];
 
 export const metadata: Metadata = {
-  title: teamSeo.title,
+  title: { absolute: teamSeo.title },
   description: teamSeo.description,
   openGraph: {
     title: teamSeo.title,
@@ -28,9 +29,14 @@ const physicianJsonLd = DOCTORS.map((doctor) => ({
   "@type": "Physician",
   name: doctor.name,
   url: `${BASE_URL}/our-team`,
-  qualifications: doctor.qualifications.join(", "),
+  ...(doctor.qualifications.length > 0 && {
+    qualifications: doctor.qualifications.join(", "),
+  }),
+  ...(doctor.photoSrc && { image: `${BASE_URL}${doctor.photoSrc}` }),
   medicalSpecialty: doctor.specialInterests,
 }));
+
+const [drBoniface, drRotimi, drMohammad, drMason] = DOCTORS;
 
 const DEFAULT_PHOTO =
   "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop";
@@ -157,7 +163,7 @@ export default function OurTeamPage() {
               <div className="mt-6">
                 <h3 className="text-sm font-bold uppercase tracking-wide text-neutral-800">Special Interests:</h3>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {DOCTORS[0].specialInterests.map((interest, idx) => (
+                  {drBoniface.specialInterests.map((interest, idx) => (
                     <span key={interest} className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${INTEREST_COLORS[idx % INTEREST_COLORS.length]}`}>
                       {interest}
                     </span>
@@ -166,15 +172,11 @@ export default function OurTeamPage() {
               </div>
 
               <div className="mt-8">
-                <a
-                  href={CLINIC_INFO.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700"
-                >
+                <BookingButton
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
                   <CalendarCheck size={16} aria-hidden="true" />
                   Book Appointment with Dr Ochayi
-                </a>
+                </BookingButton>
               </div>
             </div>
           </div>
@@ -223,7 +225,7 @@ export default function OurTeamPage() {
               <div className="mt-6">
                 <h3 className="text-sm font-bold uppercase tracking-wide text-neutral-800">Special Interest Areas</h3>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {DOCTORS[1].specialInterests.map((interest, idx) => (
+                  {drRotimi.specialInterests.map((interest, idx) => (
                     <span key={interest} className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${INTEREST_COLORS[idx % INTEREST_COLORS.length]}`}>
                       {interest}
                     </span>
@@ -232,15 +234,120 @@ export default function OurTeamPage() {
               </div>
 
               <div className="mt-8">
-                <a
-                  href={CLINIC_INFO.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700"
-                >
+                <BookingButton
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
                   <CalendarCheck size={16} aria-hidden="true" />
                   Book Appointment with Dr Akerele
-                </a>
+                </BookingButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DR MOHAMMAD NABATI AHMADI */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="grid items-start gap-10 md:grid-cols-5">
+            {/* Photo column */}
+            <div className="md:col-span-2">
+              <div className="overflow-hidden rounded-xl bg-gradient-to-b from-brand-50 to-brand-100 p-6">
+                <Image
+                  src={drMohammad.photoSrc!}
+                  alt={drMohammad.name}
+                  width={400}
+                  height={400}
+                  className="rounded-lg object-cover ring-2 ring-brand-200"
+                />
+              </div>
+            </div>
+            {/* Bio column */}
+            <div className="md:col-span-3">
+              <h2 className="text-2xl font-bold text-neutral-900 md:text-3xl">{drMohammad.name}</h2>
+              <p className="mt-1 text-sm font-medium text-brand-600">General Practitioner</p>
+
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600">
+                <p>Dr Mohammad Nabati Ahmadi is a warm, approachable and compassionate General Practitioner committed to providing high-quality, patient-centred healthcare. He has more than five years of clinical experience caring for patients of all ages and obtained his Doctor of Medicine (MD) from Ahvaz Jundishapur University of Medical Sciences in Iran.</p>
+                <p>Dr Mohammad enjoys all aspects of general practice, with a strong focus on preventive healthcare, chronic disease management and helping patients make informed decisions about their health. He believes that good medicine begins with listening carefully to his patients, understanding their concerns, and working together to develop practical, evidence-based treatment plans.</p>
+                <p>Known for his calm and caring approach, Dr Mohammad takes the time to explain medical conditions and treatment options in a clear and easy-to-understand manner, ensuring that every patient feels respected, informed and involved in their care.</p>
+                <p>Whether you are attending for a routine health check, management of an ongoing medical condition, or a new health concern, Dr Mohammad is dedicated to building long-term relationships with individuals and families and supporting their health at every stage of life.</p>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-sm font-bold uppercase tracking-wide text-neutral-800">Special Interests:</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {drMohammad.specialInterests.map((interest, idx) => (
+                    <span key={interest} className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${INTEREST_COLORS[idx % INTEREST_COLORS.length]}`}>
+                      {interest}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <BookingButton
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
+                  <CalendarCheck size={16} aria-hidden="true" />
+                  Book Appointment with Dr Mohammad
+                </BookingButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DR MOHSEN "MASON" EGHBAL */}
+      <section className="bg-neutral-50 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="grid items-start gap-10 md:grid-cols-5">
+            {/* Photo column */}
+            <div className="md:col-span-2">
+              <div className="overflow-hidden rounded-xl bg-gradient-to-b from-brand-50 to-brand-100 p-6">
+                <Image
+                  src={drMason.photoSrc!}
+                  alt={drMason.name}
+                  width={400}
+                  height={400}
+                  className="rounded-lg object-cover ring-2 ring-brand-200"
+                />
+              </div>
+            </div>
+            {/* Bio column */}
+            <div className="md:col-span-3">
+              <h2 className="text-2xl font-bold text-neutral-900 md:text-3xl">{drMason.name}</h2>
+              <p className="mt-1 text-sm font-medium text-brand-600">General Practitioner</p>
+
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600">
+                <p>Dr Mohsen Eghbal, known as Mason, is an experienced and approachable General Practitioner with a broad background in emergency medicine and general practice. He began his medical career in 2015 and has more than eight years of experience working in emergency departments across a range of hospital settings, managing acute presentations, complex medical conditions and everyday health concerns.</p>
+                <p>Before commencing practice in Australia, Mason worked across both hospital and general practice environments, developing strong skills in assessment, diagnosis and ongoing patient care. His clinical interests include general medicine, chronic disease management, skin medicine and minor procedures.</p>
+                <p>Mason provides a range of medical and cosmetic skin treatments and performs minor procedures including:</p>
+                <ul className="space-y-1.5 pl-1">
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent-400" />Cyst and mole removal</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent-400" />Skin biopsies</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent-400" />Treatment of ingrown toenails</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent-400" />Wound closure using advanced suturing techniques</li>
+                </ul>
+                <p>He enjoys caring for patients of all ages and backgrounds and places a strong emphasis on clear communication, shared decision-making and continuity of care. Mason takes the time to explain diagnoses and treatment options clearly so that patients feel comfortable, informed and actively involved in their healthcare.</p>
+                <p>Outside medicine, Mason enjoys gardening, travelling and exploring new places. He is pleased to be part of the local community and is committed to providing compassionate, reliable and patient-centred care.</p>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-sm font-bold uppercase tracking-wide text-neutral-800">Special Interest Areas</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {drMason.specialInterests.map((interest, idx) => (
+                    <span key={interest} className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${INTEREST_COLORS[idx % INTEREST_COLORS.length]}`}>
+                      {interest}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <BookingButton
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
+                  <CalendarCheck size={16} aria-hidden="true" />
+                  Book Appointment with Dr Mason
+                </BookingButton>
               </div>
             </div>
           </div>
@@ -350,15 +457,11 @@ export default function OurTeamPage() {
             Our doctors are here to support your health and wellbeing.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100">
               Book Appointment
               <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
             <a
               href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`}
               className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700"

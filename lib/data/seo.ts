@@ -29,7 +29,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
   "our-team": {
     title: "Our Team | Infinity Medical Centre Gungahlin",
     description:
-      "Meet our experienced doctors at Infinity Medical Centre Gungahlin. Dr Boniface Ochayi and Dr Rotimi Akerele provide high-quality, patient-centred care.",
+      "Meet our experienced GPs at Infinity Medical Centre Gungahlin — Dr Boniface Ochayi, Dr Rotimi Akerele, Dr Mohammad Nabati Ahmadi and Dr Mohsen (Mason) Eghbal.",
     ogType: "article",
     canonicalPath: "/our-team",
   },

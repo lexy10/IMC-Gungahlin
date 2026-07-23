@@ -21,6 +21,8 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<ContactFormErrors>({});
   const [submissionState, setSubmissionState] = useState<SubmissionState>("idle");
   const [serverError, setServerError] = useState("");
+  // Honeypot — hidden from patients, filled in by bots.
+  const [company, setCompany] = useState("");
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -51,7 +53,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, company }),
       });
 
       const data: ContactApiResponse = await res.json();
@@ -109,6 +111,20 @@ export default function ContactForm() {
           </button>
         </div>
       )}
+
+      {/* Honeypot — visually hidden, never announced to screen readers */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="contact-company">Company</label>
+        <input
+          id="contact-company"
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+        />
+      </div>
 
       {/* Name */}
       <div>

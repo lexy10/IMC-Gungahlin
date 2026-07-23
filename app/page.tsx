@@ -19,11 +19,12 @@ import HeroSection from "@/components/HeroSection";
 import AccreditationBadges from "@/components/AccreditationBadges";
 import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
+import BookingButton from "@/components/BookingButton";
 
 const homeSeo = PAGE_SEO.home;
 
 export const metadata: Metadata = {
-  title: homeSeo.title,
+  title: { absolute: homeSeo.title },
   description: homeSeo.description,
   openGraph: {
     title: homeSeo.title,
@@ -300,14 +301,10 @@ export default function HomePage() {
               <MapPin size={16} aria-hidden="true" />
               Get Directions
             </a>
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
               Book Appointment <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
           </div>
         </div>
       </section>
@@ -322,14 +319,10 @@ export default function HomePage() {
             If you are looking for accessible, high-quality healthcare in a welcoming environment, Infinity Medical Centre Gungahlin is here for you.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100">
               Book Appointment Today <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
             <a
               href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`}
               className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700"

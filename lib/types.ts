@@ -19,6 +19,8 @@ export interface ClinicInfo {
   phone: string;
   fax: string;
   bookingUrl: string;
+  /** Same booking page, flagged so the HotDoc widget opens it as a lightbox. */
+  bookingWidgetUrl: string;
   openingHours: OpeningHours[];
   geo: { latitude: number; longitude: number };
 }

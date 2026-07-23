@@ -1,10 +1,16 @@
 import { NextResponse } from "next/server";
 import { validateContactForm, generateContactPayload } from "@/lib/validation";
+import { sendContactEmail } from "@/lib/email";
 import type { ContactFormData } from "@/lib/types";
+
+// Patients must never be told their enquiry was received when it was not, so
+// every failure path below returns an error rather than a silent success.
+const DELIVERY_FAILURE_MESSAGE =
+  "We couldn't send your message just now. Please call the clinic instead.";
 
 export async function POST(request: Request) {
   try {
-    let body: ContactFormData;
+    let body: ContactFormData & { company?: unknown };
 
     try {
       body = await request.json();
@@ -13,6 +19,11 @@ export async function POST(request: Request) {
         { success: false, error: "Invalid JSON in request body." },
         { status: 400 }
       );
+    }
+
+    // Honeypot: real patients never see or fill this field.
+    if (typeof body.company === "string" && body.company.trim() !== "") {
+      return NextResponse.json({ success: true });
     }
 
     // Validate required fields exist and are strings
@@ -38,9 +49,25 @@ export async function POST(request: Request) {
     }
 
     const payload = generateContactPayload(body);
+    const result = await sendContactEmail(payload);
 
-    // Placeholder: log the enquiry (replace with email service integration)
-    console.log("[Contact Enquiry]", payload);
+    if (result.status === "not-configured") {
+      console.error(
+        `[Contact API] Mailer not configured — missing ${result.missing.join(", ")}. Enquiry not delivered.`
+      );
+      return NextResponse.json(
+        { success: false, error: DELIVERY_FAILURE_MESSAGE },
+        { status: 503 }
+      );
+    }
+
+    if (result.status === "failed") {
+      console.error("[Contact API] Delivery failed:", result.detail);
+      return NextResponse.json(
+        { success: false, error: DELIVERY_FAILURE_MESSAGE },
+        { status: 502 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

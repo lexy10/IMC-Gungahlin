@@ -4,11 +4,12 @@ import Link from "next/link";
 import { CLINIC_INFO } from "@/lib/data/clinic";
 import { PAGE_SEO, BASE_URL } from "@/lib/data/seo";
 import { Phone, ArrowRight } from "lucide-react";
+import BookingButton from "@/components/BookingButton";
 
 const aboutSeo = PAGE_SEO.about;
 
 export const metadata: Metadata = {
-  title: aboutSeo.title,
+  title: { absolute: aboutSeo.title },
   description: aboutSeo.description,
   openGraph: {
     title: aboutSeo.title,
@@ -364,15 +365,11 @@ export default function AboutPage() {
             We welcome new patients to Infinity Medical Centre Gungahlin. Whether you are seeking a regular GP, managing an ongoing condition, or looking for a healthcare provider that prioritises access and continuity of care, we are here to support you.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-brand-800 shadow-lg transition-colors hover:bg-neutral-100">
               Book an Appointment
               <ArrowRight size={16} aria-hidden="true" />
-            </a>
+            </BookingButton>
             <a
               href={`tel:${CLINIC_INFO.phone.replace(/\s/g, "")}`}
               className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700"

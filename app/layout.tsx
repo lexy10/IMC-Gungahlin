@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -39,6 +40,11 @@ export default function RootLayout({
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
         <BookingCTA />
+        {/* Powers the HotDoc lightbox on every BookingButton */}
+        <Script
+          src="https://cdn.hotdoc.com.au/static/assets/js/hotdoc-widgets.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CalendarCheck, Phone, Mail, MapPin } from "lucide-react";
 import { NAV_LINKS, CLINIC_INFO } from "@/lib/data/clinic";
 import AccreditationBadges from "@/components/AccreditationBadges";
+import BookingButton from "@/components/BookingButton";
 
 export default function Footer() {
   return (
@@ -17,15 +18,11 @@ export default function Footer() {
             <p className="mt-3 text-sm leading-relaxed text-neutral-400">
               Accessible, high-quality healthcare for the Gungahlin community.
             </p>
-            {/* <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-accent-700"
-            >
+            {/* <BookingButton
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-accent-700">
               <CalendarCheck size={14} aria-hidden="true" />
               Book Online
-            </a> */}
+            </BookingButton> */}
           </div>
 
           {/* Contact */}

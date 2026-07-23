@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CalendarCheck } from "lucide-react";
-import { CLINIC_INFO } from "@/lib/data/clinic";
+import BookingButton from "@/components/BookingButton";
 
 interface TeamCardProps {
   name: string;
@@ -92,15 +92,11 @@ export default function TeamCard({
         {/* Individual Book Online button for detailed view */}
         {detailed && (
           <div className="mt-5">
-            <a
-              href={CLINIC_INFO.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2"
-            >
+            <BookingButton
+              className="inline-flex items-center gap-2 rounded-lg bg-accent-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2">
               <CalendarCheck size={16} aria-hidden="true" />
               Book Online
-            </a>
+            </BookingButton>
           </div>
         )}
       </div>

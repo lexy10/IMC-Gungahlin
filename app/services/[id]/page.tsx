@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { SERVICES } from "@/lib/data/services";
-import { CLINIC_INFO } from "@/lib/data/clinic";
 import { BASE_URL } from "@/lib/data/seo";
+import BookingButton from "@/components/BookingButton";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = SERVICES.find((s) => s.id === id);
   if (!service) return {};
   return {
-    title: `${service.title} | Infinity Medical Centre Gungahlin`,
+    title: { absolute: `${service.title} | Infinity Medical Centre Gungahlin` },
     description: service.description,
     openGraph: {
       title: service.title,
@@ -116,14 +116,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 </p>
               )}
 
-              <a
-                href={CLINIC_INFO.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-full bg-accent-600 px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-accent-700"
-              >
+              <BookingButton
+                className="inline-block rounded-full bg-accent-600 px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-accent-700">
                 Book Now
-              </a>
+              </BookingButton>
             </div>
           </div>
         </div>

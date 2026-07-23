@@ -19,6 +19,8 @@ export const CLINIC_INFO: ClinicInfo = {
   fax: "(02) 9094 3331",
   bookingUrl:
     "https://www.hotdoc.com.au/medical-centres/gungahlin-ACT-2912/infinity-medical-centre-gungahlin/doctors",
+  bookingWidgetUrl:
+    "https://www.hotdoc.com.au/medical-centres/gungahlin-ACT-2912/infinity-medical-centre-gungahlin/doctors?wp=w_lightbox",
   openingHours: [
     { days: "Monday", hours: "8:30 AM – 5:00 PM" },
     { days: "Tuesday", hours: "8:30 AM – 5:00 PM" },
