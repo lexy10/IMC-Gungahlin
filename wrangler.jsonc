@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "imc-gungahlin",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // Keeps console.error output (e.g. contact form delivery failures) visible
+  // under Workers & Pages → imc-gungahlin → Logs in the Cloudflare dashboard.
+  "observability": {
+    "enabled": true
+  }
+}

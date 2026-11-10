@@ -16,6 +16,11 @@ out/
 .env
 .env.local
 .env*.local
+.dev.vars
+
+# cloudflare (OpenNext build output + wrangler local state)
+.open-next/
+.wrangler/
 
 # misc
 .DS_Store
