@@ -50,7 +50,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
   contact: {
     title: "Contact Us | Infinity Medical Centre Gungahlin",
     description:
-      "Contact Infinity Medical Centre Gungahlin. Located at Unit 1/61 Anthony Rolfe Avenue, Gungahlin ACT 2912. Book online or call us. Open Monday to Saturday.",
+      "Contact Infinity Medical Centre Gungahlin. Located at Unit 1/61 Anthony Rolfe Avenue, Gungahlin ACT 2912. Book online or call us. Open Monday to Friday.",
     ogType: "article",
     canonicalPath: "/contact",
   },

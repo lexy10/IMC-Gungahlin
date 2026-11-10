@@ -55,7 +55,6 @@ const localBusinessJsonLd = {
   telephone: CLINIC_INFO.phone,
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:30", closes: "17:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "12:00", closes: "18:00" },
   ],
   geo: { "@type": "GeoCoordinates", latitude: CLINIC_INFO.geo.latitude, longitude: CLINIC_INFO.geo.longitude },
 };
