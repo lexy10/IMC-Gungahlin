@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookingCTA from "@/components/BookingCTA";
+import { BASE_URL } from "@/lib/data/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Bulk billing family medical centre in Gungahlin, ACT. Comprehensive GP services, chronic disease management, preventive health, and more.",
-  metadataBase: new URL("https://infinitymedicalcentre.com.au"),
+  metadataBase: new URL(BASE_URL),
 };
 
 export default function RootLayout({

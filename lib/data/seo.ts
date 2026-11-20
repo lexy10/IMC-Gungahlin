@@ -2,7 +2,8 @@
 
 import type { PageSEO } from "@/lib/types";
 
-export const BASE_URL = "https://infinitymedicalcentre.com.au";
+// www is the primary host: imcgungahlin.com.au (no www) redirects to it.
+export const BASE_URL = "https://www.imcgungahlin.com.au";
 
 export const PAGE_SEO: Record<string, PageSEO> = {
   home: {
