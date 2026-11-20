@@ -73,4 +73,20 @@ export const DOCTORS: Doctor[] = [
     photoSrc: "/images/dr-mason.jpg",
     bio: "Dr Mohsen Eghbal, known as Mason, is an experienced and approachable General Practitioner with a broad background in emergency medicine and general practice. He began his medical career in 2015 and has more than eight years of experience working in emergency departments across a range of hospital settings, managing acute presentations, complex medical conditions and everyday health concerns. Before commencing practice in Australia, Mason worked across both hospital and general practice environments, developing strong skills in assessment, diagnosis and ongoing patient care. Mason provides a range of medical and cosmetic skin treatments and performs minor procedures including cyst and mole removal, skin biopsies, treatment of ingrown toenails and wound closure using advanced suturing techniques. He enjoys caring for patients of all ages and backgrounds and places a strong emphasis on clear communication, shared decision-making and continuity of care.",
   },
+  {
+    id: "dr-aida-razavi",
+    name: "Dr Aida Razavi",
+    qualifications: ["MD"],
+    specialInterests: [
+      "Women's health",
+      "Paediatrics and adolescent health",
+      "Preventive medicine and health screening",
+      "Chronic disease management",
+      "Mental health",
+      "Acute and general medical care",
+    ],
+    photoSrc: "/images/dr-aida.jpg",
+    languages: ["English", "Persian (Farsi)"],
+    bio: "Dr Aida Razavi is a dedicated and compassionate medical practitioner with over three years of clinical experience in general practice. She graduated with a Doctor of Medicine (MD) degree from Hormozgan University of Medical Sciences in Iran. Dr Aida is passionate about family medicine and enjoys providing comprehensive healthcare to patients of all ages, from young children to older adults. She believes that effective healthcare begins with listening, understanding and building trusting relationships with patients. Her approach is centred on providing personalised, evidence-based care, with an emphasis on patient education, early intervention and supporting individuals and families to make informed decisions about their health.",
+  },
 ];

@@ -33,10 +33,11 @@ const physicianJsonLd = DOCTORS.map((doctor) => ({
     qualifications: doctor.qualifications.join(", "),
   }),
   ...(doctor.photoSrc && { image: `${BASE_URL}${doctor.photoSrc}` }),
+  ...(doctor.languages && { knowsLanguage: doctor.languages }),
   medicalSpecialty: doctor.specialInterests,
 }));
 
-const [drBoniface, drRotimi, drMohammad, drMason] = DOCTORS;
+const [drBoniface, drRotimi, drMohammad, drMason, drAida] = DOCTORS;
 
 const DEFAULT_PHOTO =
   "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop";
@@ -354,8 +355,67 @@ export default function OurTeamPage() {
         </div>
       </section>
 
-      {/* INTERNATIONAL MEDICAL GRADUATES */}
+      {/* DR AIDA RAZAVI */}
       <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="grid items-start gap-10 md:grid-cols-5">
+            {/* Photo column */}
+            <div className="md:col-span-2">
+              <div className="overflow-hidden rounded-xl bg-gradient-to-b from-brand-50 to-brand-100 p-6">
+                <Image
+                  src={drAida.photoSrc!}
+                  alt={drAida.name}
+                  width={400}
+                  height={400}
+                  className="rounded-lg object-cover ring-2 ring-brand-200"
+                />
+              </div>
+            </div>
+            {/* Bio column */}
+            <div className="md:col-span-3">
+              <h2 className="text-2xl font-bold text-neutral-900 md:text-3xl">{drAida.name}</h2>
+              <p className="mt-1 text-sm font-medium text-brand-600">MD – Doctor of Medicine</p>
+
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600">
+                <p>Dr Aida Razavi is a dedicated and compassionate medical practitioner with over three years of clinical experience in general practice. She graduated with a Doctor of Medicine (MD) degree from Hormozgan University of Medical Sciences in Iran.</p>
+                <p>Dr Aida is passionate about family medicine and enjoys providing comprehensive healthcare to patients of all ages, from young children to older adults. She has particular interests in women&apos;s health, paediatrics, preventive medicine, chronic disease management and mental health.</p>
+                <p>She believes that effective healthcare begins with listening, understanding and building trusting relationships with patients. Her approach is centred on providing personalised, evidence-based care, with an emphasis on patient education, early intervention and supporting individuals and families to make informed decisions about their health.</p>
+                <p>Dr Aida values continuity of care and takes a holistic approach to managing both acute and chronic health concerns. She is committed to creating a welcoming and supportive environment where patients feel comfortable discussing their health needs and actively participating in their care.</p>
+                <p>Outside of medicine, Dr Aida is an enthusiastic movie lover who enjoys exploring films from different genres and cultures. She also loves travelling, discovering new places, spending time with family and friends, and being around children.</p>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-sm font-bold uppercase tracking-wide text-neutral-800">Special Interest Areas</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {drAida.specialInterests.map((interest, idx) => (
+                    <span key={interest} className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${INTEREST_COLORS[idx % INTEREST_COLORS.length]}`}>
+                      {interest}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {drAida.languages && (
+                <div className="mt-6">
+                  <h3 className="text-sm font-bold uppercase tracking-wide text-neutral-800">Languages Spoken</h3>
+                  <p className="mt-2 text-base text-neutral-600">{drAida.languages.join(" · ")}</p>
+                </div>
+              )}
+
+              <div className="mt-8">
+                <BookingButton
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-600 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-700">
+                  <CalendarCheck size={16} aria-hidden="true" />
+                  Book Appointment with Dr Aida
+                </BookingButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INTERNATIONAL MEDICAL GRADUATES */}
+      <section className="bg-neutral-50 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
@@ -375,7 +435,7 @@ export default function OurTeamPage() {
       </section>
 
       {/* NURSING & SUPPORT TEAM */}
-      <section className="bg-neutral-50 py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
@@ -403,7 +463,7 @@ export default function OurTeamPage() {
       </section>
 
       {/* CONTINUITY OF CARE */}
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-neutral-50 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
@@ -428,7 +488,7 @@ export default function OurTeamPage() {
       </section>
 
       {/* JOIN OUR TEAM */}
-      <section className="bg-neutral-50 py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">

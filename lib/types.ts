@@ -51,6 +51,8 @@ export interface Doctor {
   specialInterests: string[];
   photoSrc?: string;
   bio: string;
+  // Languages the doctor consults in, listed only when the clinic supplied them.
+  languages?: string[];
 }
 
 // Fees
